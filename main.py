@@ -1,7 +1,7 @@
 import csv
 import random
 import math
-import operator
+import operator 
  
 def loadDataset(filename, split, trainingSet=[] , testSet=[]):
 	with open(filename, 'rb') as csvfile:
