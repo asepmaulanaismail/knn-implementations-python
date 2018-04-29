@@ -67,7 +67,7 @@ def main():
         else:
             print 'WARNING:\nRatio\'s accepted value is 0.75, 0.8, or 0.9\nUsing default instead'
     loadDataset('datasets/adult_5k.data', split, trainingSet, testSet)
-    print '\n'
+    print 'Program Starts\n'
     print 'Train ratio: ' + repr(split)
     print 'Train set: ' + repr(len(trainingSet))
     print 'Test set: ' + repr(len(testSet))
@@ -81,7 +81,8 @@ def main():
         predictions.append(result)
         # print('> ' + str(x) + ' predicted=' + repr(result) + ', actual=' + repr(testSet[x][-1]))
     accuracy = getAccuracy(testSet, predictions)
-    print('Accuracy: ' + repr(round(accuracy,2)) + '%')
-    print('Program runs for ' + str(round(time.time() - startTime, 2)) + ' seconds')
+    print 'Accuracy: ' + repr(round(accuracy,2)) + '%'
+    print 'Execution time: ' + str(round(time.time() - startTime, 2)) + ' seconds'
+    print '\nProgram Ends'
     
 main()
