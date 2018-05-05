@@ -113,7 +113,7 @@ def main():
             print('WARNING:\nRatio\'s accepted value is 0.75, 0.8, or 0.9\nUsing default instead')
     
     # load data set
-    loadDataset('datasets/adult_5k.data', split, trainingSet, testSet)
+    loadDataset('datasets/adult_full.data', split, trainingSet, testSet)
 
     # print info
     print('Program Starts\n')
@@ -128,9 +128,14 @@ def main():
     k = 3
 
     for x in range(len(testSet)):
+        # get neighbors as much as k
         neighbors = getNeighbors(trainingSet, testSet[x], k)
+        # determine the prediction
         result = getResponse(neighbors)
+        # add the prediction into array
         predictions.append(result)
+
+    # calculate the accuracy
     accuracy = getAccuracy(testSet, predictions)
 
     # print info
