@@ -1,3 +1,4 @@
+# this is from internet
 # import the dependencies
 import csv
 import random
@@ -32,7 +33,7 @@ def loadDataset(filename, split, trainingSet=[] , testSet=[]):
 # params:
 # - instance1: test instance that cotains all test data
 # - instance2: 1 row of training data
-# - length: length of test instance - 1 (for loop)
+# - length: length of features - 1 (for loop)
 # output:
 # - euclidean distance
 def euclideanDistance(instance1, instance2, length):
@@ -113,7 +114,7 @@ def main():
             print('WARNING:\nRatio\'s accepted value is 0.75, 0.8, or 0.9\nUsing default instead')
     
     # load data set
-    loadDataset('datasets/adult_full.data', split, trainingSet, testSet)
+    loadDataset('datasets/adult_5k.data', split, trainingSet, testSet)
 
     # print info
     print('Program Starts\n')
