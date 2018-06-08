@@ -60,7 +60,7 @@ def main():
 
     k = 3
     predictions = []
-    trainSet, testSet = generateData("datasets/adult_5k.data", 0.75)
+    trainSet, testSet = generateData("datasets/adult_5k.data", float(sys.argv[1]))
     # print info
     print('Program Starts\n')
     print('Train ratio: ' + repr(split))
