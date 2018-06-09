@@ -1,4 +1,8 @@
-# made by me
+# Judul: Implementasi k-Nearest Neighbor Terhadap Adult Dataset Menggunakan Bahasa Pemrograman Python
+# Deskripsi: Untuk memenuhi tugas besar mata kuliah Artificial Intelligence
+# Anggota Kelompok:
+# - 0617124001 Asep Maulana Ismail
+# - 0617124007
 import csv
 import math
 import operator 
@@ -60,7 +64,7 @@ def main():
 
     k = 3
     predictions = []
-    trainSet, testSet = generateData("datasets/adult_5k.data", float(sys.argv[1]))
+    trainSet, testSet = generateData("datasets/adult_full.data", float(sys.argv[1]))
     # print info
     print('Program Starts\n')
     print('Train ratio: ' + repr(split))
