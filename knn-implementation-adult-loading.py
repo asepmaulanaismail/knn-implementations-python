@@ -75,6 +75,7 @@ def main():
         knn = getKNN(trainSet, testSet[i], k)
         prediction = getTopDefinition(knn)
         predictions.append(prediction)
+        print(((i/len(testSet))*100))
     
     accuracy = getAccuracy(testSet, predictions)
     print('Accuracy: ' + repr(round(accuracy,2)) + '%')
